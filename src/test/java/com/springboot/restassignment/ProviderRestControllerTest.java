@@ -28,7 +28,7 @@ public class ProviderRestControllerTest {
 
     @Test
     void providersByIdTest() throws Exception {
-        this.mockMvc.perform(get("/providers/146")).andDo(print()).andExpect(status().isOk())
+        this.mockMvc.perform(get("/providers/147")).andDo(print()).andExpect(status().isOk())
                 .andExpect(content().string(containsString("\"providerName\" : \"provider1\"")));
     }
 

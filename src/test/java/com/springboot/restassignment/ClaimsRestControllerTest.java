@@ -28,7 +28,7 @@ public class ClaimsRestControllerTest {
 
     @Test
     void claimsByIdTest() throws Exception {
-        this.mockMvc.perform(get("/claims/1")).andDo(print()).andExpect(status().isOk())
+        this.mockMvc.perform(get("/claims/5")).andDo(print()).andExpect(status().isOk())
                 .andExpect(content().string(containsString("\"claimId\" : 1")));
     }
 

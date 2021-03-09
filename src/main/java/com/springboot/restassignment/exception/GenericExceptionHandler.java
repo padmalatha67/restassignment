@@ -22,26 +22,8 @@ import javax.persistence.EntityNotFoundException;
 @ControllerAdvice
 public class GenericExceptionHandler  {
 
-   @ExceptionHandler
-    ResponseEntity handle(Exception e) {
-       e.printStackTrace();
-        ErrorResponse error = new ErrorResponse(
-                HttpStatus.BAD_REQUEST.value(),
-                "generic exception",
-                System.currentTimeMillis());
-        return new ResponseEntity(error, HttpStatus.BAD_REQUEST);
 
-    }
 
-   /* @ExceptionHandler(ResourceNotFoundException.class)
-    protected ResponseEntity<ErrorResponse> handleResourceNotFound(
-            ResourceNotFoundException ex) {
-        ErrorResponse error = new ErrorResponse(
-                HttpStatus.NOT_FOUND.value(),
-                "resource not found",
-                System.currentTimeMillis());
-        return new ResponseEntity(error, HttpStatus.NOT_FOUND);
-    }
 
      @ExceptionHandler(NumberFormatException.class)
     protected ResponseEntity<ErrorResponse> handleNumberFormatException(
@@ -72,7 +54,7 @@ public class GenericExceptionHandler  {
                 "Message should be in right format",
                 System.currentTimeMillis());
         return new ResponseEntity(error, HttpStatus.INTERNAL_SERVER_ERROR);
-    }*/
+    }
 
 
 }
